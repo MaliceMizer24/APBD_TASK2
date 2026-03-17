@@ -9,8 +9,11 @@ abstract class Equipment
     public string Name { get; }
     
     public string Description { get; }
-
-    public Equipment(string name, string description)
+    
+    public EquipmentStatus status { get; set; }
+    
+    public DateTime AddedDate { get; set; }
+    public Equipment(string name, string description = "")
     {
         Id = _nextId;
         _nextId++;
