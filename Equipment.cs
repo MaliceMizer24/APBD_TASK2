@@ -1,6 +1,6 @@
 ﻿namespace APBD_TASK2;
 
-abstract class Equipment
+public abstract class Equipment
 {
     private static int _nextId = 0;
     
