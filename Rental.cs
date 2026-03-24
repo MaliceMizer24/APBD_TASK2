@@ -15,4 +15,19 @@ public class Rental
         RentalDate = DateTime.Now;
         DueDate = dueDate;
     }
+    
+    public bool IsReturned => ReturnDate != null;
+
+    public bool IsOverdue =>
+        !IsReturned && DateTime.Now > DueDate;
+
+    public decimal CalculatePenalty()
+    {
+        if (ReturnDate == null || ReturnDate <= DueDate)
+            return 0;
+
+        int daysLate = (ReturnDate.Value - DueDate).Days;
+        return daysLate * 10;
+    }
+    
 }
