@@ -75,7 +75,7 @@ public class RentalService : IRentalService
         int rented = _db.Equipment.Count(e => e.status == EquipmentStatus.Rented);
         int overdue = _db.Rentals.Count(r => r.IsOverdue);
 
-        return ("Total equipment:" + total + "Available:" + available + "Rented:" + rented + "Overdue rentals:" +
+        return ("Total equipment: " + total + " Available: " + available + " Rented: " + rented + " Overdue rentals: " +
                 overdue);
     }
     
