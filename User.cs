@@ -13,7 +13,7 @@ public class User
     public string Email { get; }
     public UserType UserType { get; }
     
-    public User(int id, string firstName, string lastName, string email, UserType userType)
+    public User(string firstName, string lastName, string email, UserType userType)
         {
             Id = _nextId;
             _nextId++;
